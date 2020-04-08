@@ -2,8 +2,7 @@
 //  AppDelegate.swift
 //  Calculator
 //
-//  Created by Mark Lucas on 01/02/2018.
-//  Copyright © 2018 Mark Lucas. All rights reserved.
+//  Created by Vraj Mehta on 09/04/2020
 //
 
 import UIKit
