@@ -33,8 +33,7 @@
                                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="80" id="KQZ-MT-M9e"/>
-                                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="254" id="Tbg-2W-6gP"/>
-                                                    <constraint firstAttribute="width" constant="155" id="YIw-QH-S4a"/>
+                                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="155" id="hI9-eL-b5B"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="30"/>
                                                 <state key="normal" title="AC">
