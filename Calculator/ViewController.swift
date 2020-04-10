@@ -116,7 +116,7 @@ class ViewController: UIViewController {
                 }
                     
                 else if op == "%"{
-//                      return (calculate(input: String(left)).truncatingRemainder(dividingBy: calculate(input: String(right))))    #if % means modulus
+//                      return (calculate(input: String(left)).truncatingRemainder(dividingBy: calculate(input: String(right))))    #if "%" means modulus
                         return ( (calculate(input: String(left))*0.01) * calculate(input: String(right)) )
                 }
 
@@ -128,10 +128,12 @@ class ViewController: UIViewController {
                         return (calculate(input: String(left)) - calculate(input: String(right)))
                 }
             }
-            // handle if the operaotr is %, (number/100)
-            else if (inputArray.count == 1) && (c == "%"){
-                let left = inputArray[0]
-                return (calculate(input: String(left))*0.01)
+                
+//          handle if the operator is "%", return (number/100)
+//          Check if string contains "%" and the loop variable is also "%"
+            else if (inputArray.count == 1) && (input.contains("%")) && (c=="%"){
+                let left : Double = Double(inputArray[0])!                  // Only contains 1 element
+                return (calculate(input: String(left*0.01)))
             }
             
         }
