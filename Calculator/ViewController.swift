@@ -92,7 +92,7 @@ class ViewController: UIViewController {
         }
         
         // operators array with preference to split first. "+" & "-" to be split before "*" & "/"
-        let operators = ["+", "-", "%", "*", "/"]
+        let operators = ["+", "-", "*", "/", "%"]
         
         // loop in the order of operators array
         for c in operators {
@@ -116,7 +116,8 @@ class ViewController: UIViewController {
                 }
                     
                 else if op == "%"{
-                        return (calculate(input: String(left)).truncatingRemainder(dividingBy: calculate(input: String(right))))
+//                      return (calculate(input: String(left)).truncatingRemainder(dividingBy: calculate(input: String(right))))    #if % means modulus
+                        return ( (calculate(input: String(left))*0.01) * calculate(input: String(right)) )
                 }
 
                 else if op == "+"{
@@ -127,6 +128,12 @@ class ViewController: UIViewController {
                         return (calculate(input: String(left)) - calculate(input: String(right)))
                 }
             }
+            // handle if the operaotr is %, (number/100)
+            else if (inputArray.count == 1) && (c == "%"){
+                let left = inputArray[0]
+                return (calculate(input: String(left))*0.01)
+            }
+            
         }
         // Return 0 for any other cases
         return 0
